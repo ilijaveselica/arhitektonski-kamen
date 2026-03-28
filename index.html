@@ -112,8 +112,9 @@
     .hero {
       position: relative;
       overflow: hidden;
-      background: radial-gradient(circle at top right, rgba(154, 106, 47, 0.16), transparent 34%),
-                  linear-gradient(180deg, #fff 0%, var(--bg) 100%);
+      background:
+        linear-gradient(rgba(23, 20, 18, 0.52), rgba(23, 20, 18, 0.34)),
+        url("data/header.jpg") center center / cover no-repeat;
       border-bottom: 1px solid var(--line);
     }
 
@@ -128,14 +129,14 @@
     .eyebrow {
       display: inline-block;
       padding: 8px 14px;
-      border: 1px solid var(--line);
+      border: 1px solid rgba(255,255,255,0.28);
       border-radius: 999px;
-      background: rgba(255,255,255,0.85);
+      background: rgba(255,255,255,0.12);
       font-size: 12px;
       font-weight: 700;
       letter-spacing: 0.16em;
       text-transform: uppercase;
-      color: var(--muted);
+      color: rgba(255,255,255,0.86);
     }
 
     h1, h2, h3, h4, p { margin-top: 0; }
@@ -145,13 +146,15 @@
       font-size: clamp(40px, 7vw, 70px);
       line-height: 1.02;
       letter-spacing: -0.04em;
+      color: #fff;
+      text-shadow: 0 10px 30px rgba(0,0,0,0.22);
     }
 
     .hero p.lead {
       margin: 22px 0 0;
       max-width: 760px;
       font-size: 19px;
-      color: var(--muted);
+      color: rgba(255,255,255,0.88);
     }
 
     .hero-actions {
@@ -162,20 +165,22 @@
     }
 
     .hero-side {
-      background: rgba(255,255,255,0.72);
-      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.16);
+      border: 1px solid rgba(255,255,255,0.20);
       border-radius: var(--radius-xl);
       padding: 28px;
       box-shadow: var(--shadow);
+      backdrop-filter: blur(8px);
     }
 
     .hero-side h3 {
       font-size: 18px;
       margin-bottom: 8px;
+      color: #fff;
     }
 
     .hero-side p {
-      color: var(--muted);
+      color: rgba(255,255,255,0.84);
       font-size: 15px;
       margin-bottom: 0;
     }
@@ -196,6 +201,7 @@
 
     .stat-card {
       padding: 22px;
+      background: rgba(255,255,255,0.92);
     }
 
     .stat-card .label {
@@ -256,6 +262,15 @@
     .overview-grid { grid-template-columns: 1.15fr 0.85fr; }
     .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
     .stone-grid { grid-template-columns: repeat(3, 1fr); }
+    .sample-image {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      margin-bottom: 18px;
+      box-shadow: 0 10px 24px rgba(31, 27, 23, 0.08);
+    }
     .two-col { grid-template-columns: repeat(2, 1fr); }
     .contact-grid { grid-template-columns: 0.95fr 1.05fr; }
     .docs-grid { grid-template-columns: repeat(2, 1fr); }
@@ -637,6 +652,7 @@
 
       <div class="stone-grid">
         <div class="card content-card stone-card fade-up">
+          <img class="sample-image" src="data/stone3.jpg" alt="Rosso-type limestone sample" />
           <h3>Rosso-type limestone</h3>
           <p class="muted">
             Decorative pink-red to ochre limestone suitable for high-value architectural use, interior cladding,
@@ -644,6 +660,7 @@
           </p>
         </div>
         <div class="card content-card stone-card fade-up">
+          <img class="sample-image" src="data/stone4.jpg" alt="Giallo-type limestone sample" />
           <h3>Giallo-type limestone</h3>
           <p class="muted">
             Yellow-brown decorative limestone suited to vertical and horizontal surfaces in both interior and exterior settings,
