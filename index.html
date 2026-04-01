@@ -3,30 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Off-Market Quarry Portfolio | Teaser</title>
-  <meta name="description" content="Off-market equity sale of a quarry concession portfolio in Croatia." />
+  <title>Dalmatian Limestone Portfolio | Off-Market Investment Opportunity</title>
+  <meta name="description" content="Off-market sale of a Croatian limestone portfolio featuring Rosso, Giallo, and grey decorative stone with long-term concessions and established reserves." />
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <style>
     :root {
-      --bg: #f7f4ef;
+      --bg: #f5f1ea;
       --surface: #ffffff;
-      --surface-soft: #f1ece3;
-      --text: #1f1b17;
-      --muted: #6f655a;
-      --line: #ddd4c8;
-      --accent: #9a6a2f;
-      --accent-dark: #7f5523;
-      --dark: #171412;
-      --dark-soft: #26211d;
-      --shadow: 0 18px 50px rgba(31, 27, 23, 0.08);
+      --surface-soft: #eee7dc;
+      --surface-tint: #f8f4ee;
+      --text: #1d1916;
+      --muted: #6d6358;
+      --line: #ddd2c3;
+      --accent: #9c5f32;
+      --accent-2: #b08a4e;
+      --dark: #151210;
+      --dark-soft: #221d19;
+      --shadow: 0 18px 50px rgba(29, 25, 22, 0.08);
       --radius-xl: 28px;
       --radius-lg: 22px;
       --radius-md: 16px;
-      --max: 1200px;
+      --max: 1220px;
     }
 
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
+
     body {
       margin: 0;
       font-family: Inter, Arial, Helvetica, sans-serif;
@@ -48,8 +50,8 @@
       top: 0;
       z-index: 50;
       backdrop-filter: blur(12px);
-      background: rgba(247, 244, 239, 0.84);
-      border-bottom: 1px solid rgba(221, 212, 200, 0.8);
+      background: rgba(245, 241, 234, 0.84);
+      border-bottom: 1px solid rgba(221, 210, 195, 0.85);
     }
 
     .topbar-inner {
@@ -57,13 +59,26 @@
       justify-content: space-between;
       align-items: center;
       gap: 20px;
-      min-height: 72px;
+      min-height: 74px;
+    }
+
+    .brand-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
     }
 
     .brand {
       font-size: 15px;
-      font-weight: 700;
+      font-weight: 800;
       letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .brand-sub {
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: 0.1em;
       text-transform: uppercase;
     }
 
@@ -100,59 +115,61 @@
     .btn-primary:hover { background: #000; }
 
     .btn-secondary {
-      background: var(--surface);
-      border-color: var(--line);
-      color: var(--text);
+      background: rgba(255,255,255,0.14);
+      border-color: rgba(255,255,255,0.26);
+      color: #fff;
     }
 
     .btn-secondary:hover {
-      background: var(--surface-soft);
+      background: rgba(255,255,255,0.2);
     }
 
     .hero {
       position: relative;
       overflow: hidden;
       background:
-        linear-gradient(rgba(23, 20, 18, 0.52), rgba(23, 20, 18, 0.34)),
+        linear-gradient(115deg, rgba(18, 15, 13, 0.78), rgba(18, 15, 13, 0.42)),
+        radial-gradient(circle at top right, rgba(156, 95, 50, 0.32), transparent 30%),
         url("data/header.jpg") center center / cover no-repeat;
       border-bottom: 1px solid var(--line);
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 36px;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 30px;
       align-items: end;
-      padding: 80px 0 64px;
+      padding: 88px 0 48px;
     }
 
     .eyebrow {
       display: inline-block;
       padding: 8px 14px;
-      border: 1px solid rgba(255,255,255,0.28);
+      border: 1px solid rgba(255,255,255,0.26);
       border-radius: 999px;
-      background: rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.1);
       font-size: 12px;
       font-weight: 700;
       letter-spacing: 0.16em;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.86);
+      color: rgba(255,255,255,0.9);
     }
 
     h1, h2, h3, h4, p { margin-top: 0; }
 
     h1 {
       margin: 20px 0 0;
-      font-size: clamp(40px, 7vw, 70px);
-      line-height: 1.02;
-      letter-spacing: -0.04em;
+      font-size: clamp(42px, 7vw, 74px);
+      line-height: 0.98;
+      letter-spacing: -0.045em;
       color: #fff;
-      text-shadow: 0 10px 30px rgba(0,0,0,0.22);
+      text-shadow: 0 12px 30px rgba(0,0,0,0.22);
+      max-width: 820px;
     }
 
     .hero p.lead {
       margin: 22px 0 0;
-      max-width: 760px;
+      max-width: 720px;
       font-size: 19px;
       color: rgba(255,255,255,0.88);
     }
@@ -164,32 +181,56 @@
       margin-top: 32px;
     }
 
-    .hero-side {
-      background: rgba(255,255,255,0.16);
-      border: 1px solid rgba(255,255,255,0.20);
+    .hero-panel {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.18);
       border-radius: var(--radius-xl);
       padding: 28px;
       box-shadow: var(--shadow);
       backdrop-filter: blur(8px);
-    }
-
-    .hero-side h3 {
-      font-size: 18px;
-      margin-bottom: 8px;
       color: #fff;
     }
 
-    .hero-side p {
+    .hero-panel h3 {
+      font-size: 18px;
+      margin-bottom: 16px;
+      color: #fff;
+    }
+
+    .hero-panel p,
+    .hero-panel li {
       color: rgba(255,255,255,0.84);
       font-size: 15px;
-      margin-bottom: 0;
+    }
+
+    .hero-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    .hero-bullets li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .tick {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #f0c991;
+      margin-top: 8px;
+      flex: 0 0 auto;
     }
 
     .stats {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 18px;
-      margin-top: 34px;
+      margin: 22px 0 58px;
     }
 
     .card {
@@ -201,12 +242,15 @@
 
     .stat-card {
       padding: 22px;
-      background: rgba(255,255,255,0.92);
+      background: rgba(255,255,255,0.94);
     }
 
     .stat-card .label {
-      font-size: 13px;
+      font-size: 12px;
       color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.11em;
+      font-weight: 700;
     }
 
     .stat-card .value {
@@ -217,9 +261,7 @@
       letter-spacing: -0.03em;
     }
 
-    section {
-      padding: 76px 0;
-    }
+    section { padding: 78px 0; }
 
     .section-head {
       max-width: 900px;
@@ -230,15 +272,15 @@
       font-size: 12px;
       text-transform: uppercase;
       letter-spacing: 0.18em;
-      font-weight: 700;
+      font-weight: 800;
       color: var(--accent);
       margin-bottom: 10px;
     }
 
     h2 {
-      font-size: clamp(30px, 4vw, 46px);
-      line-height: 1.08;
-      letter-spacing: -0.03em;
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1.05;
+      letter-spacing: -0.035em;
       margin-bottom: 12px;
     }
 
@@ -254,38 +296,26 @@
     .stone-grid,
     .two-col,
     .contact-grid,
+    .why-grid,
     .docs-grid {
       display: grid;
       gap: 24px;
     }
 
-    .overview-grid { grid-template-columns: 1.15fr 0.85fr; }
+    .overview-grid { grid-template-columns: 1.05fr 0.95fr; }
     .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
     .stone-grid { grid-template-columns: repeat(3, 1fr); }
-    .sample-image {
-      width: 100%;
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
-      border-radius: 18px;
-      border: 1px solid var(--line);
-      margin-bottom: 18px;
-      box-shadow: 0 10px 24px rgba(31, 27, 23, 0.08);
-    }
     .two-col { grid-template-columns: repeat(2, 1fr); }
-    .contact-grid { grid-template-columns: 0.95fr 1.05fr; }
-    .docs-grid { grid-template-columns: repeat(2, 1fr); }
+    .contact-grid { grid-template-columns: 0.92fr 1.08fr; }
+    .why-grid { grid-template-columns: repeat(3, 1fr); }
 
-    .content-card {
-      padding: 30px;
-    }
-
+    .content-card { padding: 30px; }
     .content-card p:last-child,
     .content-card ul:last-child { margin-bottom: 0; }
 
     .muted { color: var(--muted); }
 
     .highlight-list,
-    .process-list,
     .clean-list {
       list-style: none;
       padding: 0;
@@ -293,7 +323,7 @@
     }
 
     .highlight-list li,
-    .process-list li {
+    .clean-list li {
       display: flex;
       align-items: flex-start;
       gap: 12px;
@@ -302,7 +332,7 @@
     }
 
     .highlight-list li:last-child,
-    .process-list li:last-child { padding-bottom: 0; }
+    .clean-list li:last-child { padding-bottom: 0; }
 
     .dot {
       width: 10px;
@@ -317,7 +347,8 @@
     .stone-card h3,
     .process-card h3,
     .docs-card h3,
-    .contact-card h3 {
+    .contact-card h3,
+    .why-card h3 {
       font-size: 24px;
       margin-bottom: 10px;
     }
@@ -351,8 +382,18 @@
       line-height: 1.35;
     }
 
+    .sample-image {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      margin-bottom: 18px;
+      box-shadow: 0 10px 24px rgba(31, 27, 23, 0.08);
+    }
+
     .soft {
-      background: var(--surface-soft);
+      background: var(--surface-tint);
       border-top: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
     }
@@ -383,12 +424,30 @@
       flex: 0 0 auto;
       padding: 4px 10px;
       border-radius: 12px;
-      background: rgba(154, 106, 47, 0.22);
-      color: #f4d5ab;
+      background: rgba(176, 138, 78, 0.2);
+      color: #f0d09d;
       font-size: 12px;
       font-weight: 800;
       letter-spacing: 0.08em;
     }
+
+    .band {
+      border-radius: var(--radius-xl);
+      background: linear-gradient(135deg, #1a1512, #2b231d);
+      color: #fff;
+      padding: 34px;
+      border: 1px solid rgba(255,255,255,0.05);
+      box-shadow: var(--shadow);
+    }
+
+    .band-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .band p { color: rgba(255,255,255,0.8); }
 
     .docs-list {
       display: grid;
@@ -403,6 +462,13 @@
       border-radius: var(--radius-md);
       padding: 14px 16px;
       font-size: 15px;
+    }
+
+    .quote {
+      font-size: 20px;
+      line-height: 1.5;
+      color: #fff;
+      margin: 0;
     }
 
     .form-grid {
@@ -465,8 +531,9 @@
       .portfolio-grid,
       .stone-grid,
       .stats,
-      .docs-grid,
-      .docs-list {
+      .why-grid,
+      .docs-list,
+      .band-grid {
         grid-template-columns: 1fr;
       }
 
@@ -478,34 +545,47 @@
 
     @media (max-width: 760px) {
       .container { width: min(var(--max), calc(100% - 24px)); }
+
       .topbar-inner {
         flex-direction: column;
         align-items: flex-start;
         padding: 14px 0;
       }
+
       .nav {
         flex-wrap: wrap;
         gap: 14px;
       }
-      .hero-grid { padding: 56px 0 44px; }
+
+      .hero-grid { padding: 58px 0 28px; }
+      .stats { margin-bottom: 42px; }
       section { padding: 58px 0; }
-      .stats,
+
       .meta-grid,
-      .form-grid { grid-template-columns: 1fr; }
+      .form-grid,
+      .docs-list { grid-template-columns: 1fr; }
+
       .content-card,
-      .hero-side { padding: 22px; }
-      h1 { font-size: 38px; }
+      .hero-panel,
+      .band { padding: 22px; }
+
+      h1 { font-size: 40px; }
+      .hero p.lead { font-size: 17px; }
     }
   </style>
 </head>
 <body>
   <header class="topbar">
     <div class="container topbar-inner">
-      <div class="brand">Adriatic Stone Portfolio</div>
+      <div class="brand-wrap">
+        <div class="brand">Dalmatian Limestone Portfolio</div>
+        <div class="brand-sub">Off-market natural stone opportunity</div>
+      </div>
       <nav class="nav">
         <a href="#overview">Overview</a>
         <a href="#portfolio">Portfolio</a>
-        <a href="#stone">Stone Profile</a>
+        <a href="#materials">Materials</a>
+        <a href="#investment-case">Investment Case</a>
         <a href="#process">Process</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -517,39 +597,40 @@
       <div class="hero-grid">
         <div class="fade-up">
           <div class="eyebrow">Off-Market Investment Opportunity · Croatia</div>
-          <h1>Portfolio Sale of Decorative Limestone Quarry Concessions</h1>
+          <h1>Premium Limestone Portfolio with Long-Term Concessions</h1>
           <p class="lead">
-            Equity sale of a special purpose entity (SPE) holding four quarry concessions with long-dated tenure,
-            confirmed reserves, and exposure to decorative limestone varieties suitable for architectural and
-            construction applications.
+            Portfolio sale of concession-backed limestone assets featuring Rosso, Giallo, and grey decorative stone profiles,
+            supported by established reserves, scalable annual production, and long-dated tenure in a Mediterranean export market.
           </p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#contact">Request Teaser Pack</a>
+            <a class="btn btn-primary" href="#contact">Request Information Pack</a>
             <a class="btn btn-secondary" href="#portfolio">View Portfolio Summary</a>
           </div>
         </div>
 
-        <div class="hero-side fade-up">
-          <h3>Discreet market positioning</h3>
-          <p>
-            This website is intentionally structured as a teaser. Seller identity, detailed field-level data,
-            and sensitive materials are withheld from the public domain and may be shared selectively with qualified parties.
-          </p>
+        <div class="hero-panel fade-up">
+          <h3>At a Glance</h3>
+          <ul class="hero-bullets">
+            <li><span class="tick"></span><span>~271,000 m³ exploitable limestone resources</span></li>
+            <li><span class="tick"></span><span>Concessions extending to 2057</span></li>
+            <li><span class="tick"></span><span>Decorative Rosso and Giallo limestone profiles</span></li>
+            <li><span class="tick"></span><span>~8,200 m³ annual production capacity</span></li>
+          </ul>
         </div>
       </div>
 
       <div class="stats">
         <div class="card stat-card fade-up">
-          <div class="label">Confirmed block reserves</div>
-          <div class="value">~444,000 m³</div>
+          <div class="label">Total geological reserves</div>
+          <div class="value">~445,000 m³</div>
         </div>
         <div class="card stat-card fade-up">
-          <div class="label">Planned annual capacity</div>
-          <div class="value">~10,000 m³</div>
+          <div class="label">Exploitable reserves</div>
+          <div class="value">~271,000 m³</div>
         </div>
         <div class="card stat-card fade-up">
-          <div class="label">Concession tenor</div>
-          <div class="value">Up to 2057</div>
+          <div class="label">Annual production</div>
+          <div class="value">~8,200 m³</div>
         </div>
         <div class="card stat-card fade-up">
           <div class="label">Transaction structure</div>
@@ -563,51 +644,83 @@
     <div class="container">
       <div class="overview-grid">
         <div class="section-head fade-up">
-          <div class="kicker">Portfolio Overview</div>
-          <h2>A concession-backed natural stone opportunity</h2>
+          <div class="kicker">Overview</div>
+          <h2>A natural stone platform with decorative upside</h2>
           <p>
-            The portfolio comprises two asset groups within a single transaction structure. The asset base includes decorative limestone with commercial Dalmatia Rosso and Giallo Dalmatia profiles, as well as technical construction stone rights.
+            This opportunity is best presented as a premium limestone portfolio rather than a standard quarry disposal.
+            The asset base combines red, yellow-brown, and grey decorative limestone with additional construction-stone potential,
+            creating a broader monetization profile across architectural and industrial end-markets.
           </p>
         </div>
 
         <div class="card content-card fade-up">
-          <h3>Investment Highlights</h3>
+          <h3>Key investment highlights</h3>
           <ul class="highlight-list">
-            <li><span class="dot"></span><span>Equity sale of a clean SPE holding multiple active quarry concessions</span></li>
-            <li><span class="dot"></span><span>Approx. 444,000 m³ of confirmed block reserves across the portfolio</span></li>
-            <li><span class="dot"></span><span>Decorative Rosso and Giallo limestone profiles plus technical construction stone</span></li>
-            <li><span class="dot"></span><span>Resolved servitudes, access routes, and concession documentation in place</span></li>
-            <li><span class="dot"></span><span>Low annual fixed concession burden relative to reserve base</span></li>
-            <li><span class="dot"></span><span>Controlled off-market process aimed at qualified industrial and financial buyers</span></li>
+            <li><span class="dot"></span><span>Single transaction structure for a portfolio of concession-backed stone assets</span></li>
+            <li><span class="dot"></span><span>Approx. 445,000 m³ of geological reserves and ~271,000 m³ of exploitable reserves</span></li>
+            <li><span class="dot"></span><span>Commercial positioning across Rosso-type, Giallo-type, and grey decorative limestone</span></li>
+            <li><span class="dot"></span><span>Core concessions with tenure extending to 2057</span></li>
+            <li><span class="dot"></span><span>Established documentation base including reserve, concession, mining, and environmental materials</span></li>
+            <li><span class="dot"></span><span>Suitable for strategic stone operators, processors, export-focused buyers, and sector investors</span></li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="portfolio" class="soft">
+  <section class="soft">
+    <div class="container">
+      <div class="band fade-up">
+        <div class="band-grid">
+          <div>
+            <div class="kicker" style="color:#f0c991;">Investment Positioning</div>
+            <h3 style="font-size:34px; margin-bottom:12px;">
+              Premium limestone exposure with long-term reserve security
+            </h3>
+            <p>
+              The portfolio combines decorative limestone profiles with long-dated concessions and established reserves,
+              creating a platform suitable for both industrial operators and investment-oriented buyers seeking exposure
+              to the natural stone sector.
+            </p>
+          </div>
+          <div>
+            <p class="quote">
+              “A concession-backed limestone portfolio with decorative Rosso and Giallo exposure,
+              supported by long-term reserves and scalable production potential.”
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio">
     <div class="container">
       <div class="section-head fade-up">
         <div class="kicker">Portfolio Summary</div>
-        <h2>Two asset groups, sold together as one portfolio</h2>
+        <h2>Multiple concessions, one controlled sale process</h2>
         <p>
-          The sale contemplates a single SPE transaction. Operationally, the portfolio comprises a primary asset group and an additional asset group, both located within the Dalmatia region.
+          The portfolio includes multiple fields on 2 different location with differentiated material profiles. Public-facing materials remain high level,
+          while field-level detail, technical studies, and concession documents can be released during a managed process.
         </p>
       </div>
 
       <div class="portfolio-grid">
         <div class="card content-card asset-card fade-up">
-          <div class="kicker">Asset Group</div>
-          <h3>Portfolio Segment A</h3>
-          <p class="muted">Primary reserve base within the portfolio, positioned as the core asset group of the transaction.</p>
+          <div class="kicker">Decorative Core</div>
+          <h3>Rosso and Giallo block fields</h3>
+          <p class="muted">
+            Primary value driver of the portfolio, comprising red and yellow-brown limestone with architectural positioning,
+            stronger visual identity, and export-friendly commercial appeal.
+          </p>
           <div class="meta-grid">
             <div class="mini-box">
-              <div class="mini-label">Reserves</div>
-              <div class="mini-value">~411,000 m³</div>
+              <div class="mini-label">Reserve Base</div>
+              <div class="mini-value">Majority of portfolio reserves</div>
             </div>
             <div class="mini-box">
-              <div class="mini-label">Capacity</div>
-              <div class="mini-value">8,950 m³ / year</div>
+              <div class="mini-label">Profile</div>
+              <div class="mini-value">Decorative block stone</div>
             </div>
             <div class="mini-box">
               <div class="mini-label">Tenure</div>
@@ -617,21 +730,23 @@
         </div>
 
         <div class="card content-card asset-card fade-up">
-          <div class="kicker">Asset Group</div>
-          <h3>Portfolio Segment B</h3>
-          <p class="muted">Additional asset group within the portfolio with decorative stone profile and technical stone rights.</p>
+          <div class="kicker">Supporting Asset</div>
+          <h3>Grey stone and wider utilization potential</h3>
+          <p class="muted">
+            Complementary field profile supporting broader marketability through grey decorative stone and additional construction-related stone applications.
+          </p>
           <div class="meta-grid">
             <div class="mini-box">
-              <div class="mini-label">Reserves</div>
-              <div class="mini-value">~33,000 m³</div>
+              <div class="mini-label">Function</div>
+              <div class="mini-value">Portfolio diversification</div>
             </div>
             <div class="mini-box">
-              <div class="mini-label">Capacity</div>
-              <div class="mini-value">1,000 m³ / year</div>
+              <div class="mini-label">Applications</div>
+              <div class="mini-value">Decorative + technical use</div>
             </div>
             <div class="mini-box">
-              <div class="mini-label">Tenure</div>
-              <div class="mini-value">Until 2042</div>
+              <div class="mini-label">Commercial Role</div>
+              <div class="mini-value">Broader monetization profile</div>
             </div>
           </div>
         </div>
@@ -639,47 +754,77 @@
     </div>
   </section>
 
-  <section id="stone">
+  <section id="materials" class="soft">
     <div class="container">
       <div class="section-head fade-up">
-        <div class="kicker">Stone Profile</div>
-        <h2>Decorative limestone with architectural positioning</h2>
+        <div class="kicker">Materials</div>
+        <h2>Commercial stone profiles with distinct market positioning</h2>
         <p>
-          The portfolio includes decorative limestone profiles associated with Rosso-type and Giallo-type commercial positioning,
-          together with technical construction stone applications that support wider resource utilization.
+          The material mix enables a differentiated sales story: Rosso for premium architectural identity,
+          Giallo for broader decorative use, and grey limestone for complementary design and construction applications.
         </p>
       </div>
 
       <div class="stone-grid">
         <div class="card content-card stone-card fade-up">
-          <img class="sample-image" src="data/rosso.jpg" alt="Rosso-type limestone sample" />
+          <img class="sample-image" src="data/rosso.jpg" alt="Rosso decorative limestone sample" />
           <h3>Rosso-type limestone</h3>
           <p class="muted">
-            Decorative pink-red to ochre limestone suitable for high-value architectural use, interior cladding,
-            selected exterior applications, and design-led natural stone projects.
+            Pink-red to ochre decorative limestone suitable for premium interior and exterior architectural use,
+            with the strongest branding potential within the portfolio.
           </p>
         </div>
+
         <div class="card content-card stone-card fade-up">
-          <img class="sample-image" src="data/giallo.jpg" alt="Giallo-type limestone sample" />
+          <img class="sample-image" src="data/giallo.jpg" alt="Giallo decorative limestone sample" />
           <h3>Giallo-type limestone</h3>
           <p class="muted">
-            Yellow-brown decorative limestone suited to vertical and horizontal surfaces in both interior and exterior settings,
-            with broader architectural and construction market positioning.
+            Yellow-brown limestone with broad design and construction relevance, offering a commercially versatile decorative profile.
           </p>
         </div>
+
         <div class="card content-card stone-card fade-up">
           <img class="sample-image" src="data/tango.jpg" alt="Grey decorative limestone sample" />
-          <h3>Grey decorative limestone</h3>
+          <h3>Grey limestone</h3>
           <p class="muted">
-            Grey-toned decorative limestone with a distinct visual profile suitable for selected architectural, cladding,
-            and design-led natural stone applications.
+            Grey-toned limestone suited to selected cladding, paving, and design-led natural stone projects,
+            while also supporting wider resource utilization.
           </p>
         </div>
-        <div class="card content-card stone-card fade-up">
-          <h3>Technical construction stone</h3>
+      </div>
+    </div>
+  </section>
+
+  <section id="investment-case">
+    <div class="container">
+      <div class="section-head fade-up">
+        <div class="kicker">Investment Case</div>
+        <h2>Attractive exposure to decorative limestone with long-term concessions</h2>
+        <p>
+          The portfolio combines established reserves, long-dated concession security, and commercially relevant limestone profiles,
+          offering potential for both industrial-scale extraction and higher-value architectural applications in export-driven markets.
+        </p>
+      </div>
+
+      <div class="why-grid">
+        <div class="card content-card why-card fade-up">
+          <h3>Long-term reserve life</h3>
           <p class="muted">
-            Additional monetization potential through use in asphalt mixes, concrete, road base layers, aggregate applications,
-            and other construction-related uses.
+            Core concessions extend to 2057, supporting a longer planning horizon and making the platform more relevant to industrial buyers.
+          </p>
+        </div>
+
+        <div class="card content-card why-card fade-up">
+          <h3>Material differentiation</h3>
+          <p class="muted">
+            Decorative stone types provide a better narrative and potentially better economics than a purely technical-stone story.
+          </p>
+        </div>
+
+        <div class="card content-card why-card fade-up">
+          <h3>Export-friendly geography</h3>
+          <p class="muted">
+            Southern Croatia provides access toward regional and international sales channels, including Mediterranean and overseas stone markets.
           </p>
         </div>
       </div>
@@ -690,33 +835,33 @@
     <div class="container two-col">
       <div class="card content-card docs-card fade-up">
         <div class="kicker">Documentation</div>
-        <h3>Indicative status of project documentation</h3>
+        <h3>Indicative project documentation status</h3>
         <p class="muted">
-          Based on seller-provided information, the project is supported by core concession, reserve, servitude,
-          and permitting documentation, subject to customary buyer review.
+          Based on seller-provided information, the portfolio is supported by core concession, geological, mining,
+          and environmental materials, subject to customary buyer review and legal verification.
         </p>
         <div class="docs-list">
-          <div class="docs-item">Location permits</div>
           <div class="docs-item">Concession decisions and agreements</div>
-          <div class="docs-item">Confirmed reserves and reserve studies</div>
-          <div class="docs-item">Mining / quarry project documentation</div>
-          <div class="docs-item">Servitude agreements</div>
+          <div class="docs-item">Geological and reserve studies</div>
+          <div class="docs-item">Mining / exploitation documentation</div>
           <div class="docs-item">Environmental documentation</div>
+          <div class="docs-item">Access and servitude documentation</div>
+          <div class="docs-item">Corporate transaction materials</div>
         </div>
       </div>
 
       <div id="process" class="card content-card dark-block process-card fade-up">
         <div class="kicker" style="color:#f0c991;">Process</div>
-        <h3>Controlled disclosure and investor qualification</h3>
+        <h3>Controlled disclosure and buyer qualification</h3>
         <p>
-          This website is intended solely as an initial teaser. Seller identity, detailed field information, and full project
-          documentation are not disclosed publicly and may be released selectively to qualified counterparties during a structured process.
+          This website is intended solely as an initial teaser. Seller identity, field-level technical data,
+          pricing assumptions, and full documentation are withheld from the public domain and released selectively during a structured process.
         </p>
 
-        <div class="step"><div class="step-no">01</div><div>Initial expression of interest</div></div>
-        <div class="step"><div class="step-no">02</div><div>Counterparty review and preliminary qualification</div></div>
-        <div class="step"><div class="step-no">03</div><div>NDA and release of extended materials</div></div>
-        <div class="step"><div class="step-no">04</div><div>Indicative offer and follow-up process</div></div>
+        <div class="step"><div class="step-no">01</div><div>Initial outreach or expression of interest</div></div>
+        <div class="step"><div class="step-no">02</div><div>Counterparty screening and strategic fit review</div></div>
+        <div class="step"><div class="step-no">03</div><div>NDA execution and access to extended materials</div></div>
+        <div class="step"><div class="step-no">04</div><div>Management dialogue, site visit, and indicative offer</div></div>
       </div>
     </div>
   </section>
@@ -727,48 +872,58 @@
         <div class="kicker">Contact</div>
         <h2>Request additional information</h2>
         <p>
-          Qualified investors, industrial buyers, and sector-focused funds may request additional information.
-          A more detailed information pack can be made available following preliminary review and confidentiality procedures.
+          Qualified investors, industrial stone operators, processors, and sector-focused funds may request an extended information pack.
+          Access can be provided following preliminary review and confidentiality procedures.
         </p>
       </div>
 
       <div class="card content-card contact-card fade-up">
-        <h3>Enquiry Form</h3>
-        <form>
-          <div class="form-grid">
-            <div>
-              <label for="name">Name</label>
-              <input id="name" type="text" placeholder="Your name" />
-            </div>
-            <div>
-              <label for="company">Company</label>
-              <input id="company" type="text" placeholder="Company name" />
-            </div>
-            <div>
-              <label for="email">Email</label>
-              <input id="email" type="email" placeholder="Email address" />
-            </div>
-            <div>
-              <label for="country">Country</label>
-              <input id="country" type="text" placeholder="Country" />
-            </div>
+        <h3>Contact</h3>
+
+        <p class="muted" style="margin-bottom:18px;">
+          For additional information, initial discussions, or to request further materials,
+          interested parties may contact the transaction intermediary directly.
+        </p>
+
+        <div style="margin-bottom:18px;">
+          <div style="font-size:13px; text-transform:uppercase; letter-spacing:0.12em; color:var(--muted); font-weight:700;">
+            Phone
           </div>
-          <div style="margin-top:16px;">
-            <label for="message">Brief message</label>
-            <textarea id="message" placeholder="Tell us about your investment profile or strategic interest."></textarea>
+          <div style="font-size:20px; font-weight:700; margin-top:6px;">
+            +385 98 995 5000
           </div>
-          <div style="margin-top:16px; display:flex; gap:12px; flex-wrap:wrap; align-items:center;">
-            <button type="submit" class="btn btn-primary">Submit Enquiry</button>
-            <div class="form-note">Placeholder form only. Backend, routing, privacy policy, and NDA workflow can be added next.</div>
+        </div>
+
+        <div style="margin-bottom:18px;">
+          <div style="font-size:13px; text-transform:uppercase; letter-spacing:0.12em; color:var(--muted); font-weight:700;">
+            Intermediary
           </div>
-        </form>
+          <div style="font-size:18px; font-weight:700; margin-top:6px;">
+            Tri Kapital d.o.o.
+          </div>
+        </div>
+
+        <div>
+          <div style="font-size:13px; text-transform:uppercase; letter-spacing:0.12em; color:var(--muted); font-weight:700;">
+            Website
+          </div>
+          <div style="margin-top:6px;">
+            <a href="https://www.trikapital.com" target="_blank" style="font-weight:700; color:var(--accent);">
+              www.trikapital.com
+            </a>
+          </div>
+        </div>
+
+        <div class="form-note" style="margin-top:20px;">
+          Tri Kapital d.o.o. acts as intermediary in this transaction. Further materials may be shared upon request and subject to standard confidentiality procedures.
+        </div>
       </div>
     </div>
   </section>
 
   <footer class="footer">
     <div class="container">
-      Teaser website draft for an off-market quarry portfolio sale. Public content should remain intentionally limited until approved.
+      Teaser website for an off-market Croatian limestone portfolio. Public information is intentionally limited and may be updated as part of a controlled sale process.
     </div>
   </footer>
 
