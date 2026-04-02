@@ -127,11 +127,15 @@
     .hero {
       position: relative;
       overflow: hidden;
+      min-height: calc(100vh - 74px);
+      display: flex;
+      align-items: stretch;
       background:
         linear-gradient(115deg, rgba(18, 15, 13, 0.78), rgba(18, 15, 13, 0.42)),
         radial-gradient(circle at top right, rgba(156, 95, 50, 0.32), transparent 30%),
         url("data/header.jpg") center center / cover no-repeat;
       border-bottom: 1px solid var(--line);
+      padding: 0px;
     }
 
     .hero-grid {
@@ -139,7 +143,7 @@
       grid-template-columns: 1.08fr 0.92fr;
       gap: 30px;
       align-items: end;
-      padding: 88px 0 48px;
+      padding: 60px 0 48px;
     }
 
     .eyebrow {
