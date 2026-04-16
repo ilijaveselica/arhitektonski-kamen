@@ -402,6 +402,61 @@ h2 {
   box-shadow: 0 10px 24px rgba(31, 27, 23, 0.08);
 }
 
+
+.sample-image:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 30px rgba(31, 27, 23, 0.12);
+}
+
+.image-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(10, 8, 7, 0.88);
+  z-index: 200;
+}
+
+.image-modal.open {
+  display: flex;
+}
+
+.image-modal-content {
+  position: relative;
+  width: min(1200px, 100%);
+  max-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-modal img {
+  width: auto;
+  max-width: 100%;
+  max-height: 90vh;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+  background: #fff;
+}
+
+.image-modal-close {
+  position: absolute;
+  top: -14px;
+  right: -14px;
+  width: 42px;
+  height: 42px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.96);
+  color: var(--dark);
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.2);
+}
+
 .soft {
   background: var(--surface-tint);
   border-top: 1px solid var(--line);
