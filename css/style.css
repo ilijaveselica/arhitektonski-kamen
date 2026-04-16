@@ -400,8 +400,9 @@ h2 {
   border: 1px solid var(--line);
   margin-bottom: 18px;
   box-shadow: 0 10px 24px rgba(31, 27, 23, 0.08);
+  cursor: zoom-in;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
-
 
 .sample-image:hover {
   transform: translateY(-2px);
